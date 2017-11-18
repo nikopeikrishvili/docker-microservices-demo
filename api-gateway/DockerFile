@@ -1,5 +1,5 @@
 FROM nginx
 COPY conf/nginx.conf /etc/nginx/nginx.conf
-RUN rm -rf /etc/nginx/conf.d/*
+RUN rm -rf /etc/nginx/conf.d/*; exit 0
 COPY services/* /etc/nginx/conf.d/
 EXPOSE 80
