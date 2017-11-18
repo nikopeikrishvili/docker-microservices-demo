@@ -3,8 +3,6 @@ services:
 
   authentication:
     build: authentication
-    dockerfile: Dockerfile
-
     environment:
       SERVICE_NAME: authentication
   notifications:
@@ -18,8 +16,6 @@ services:
   users:
     build: users
     context: users
-    dockerfile: Dockerfile
-
     environment:
       SERVICE_NAME: users
 
