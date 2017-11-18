@@ -36,6 +36,4 @@ services:
       - users
     ports:
       - "80:80"
-networks:
-    dockernet:
-        external: true      
+    
