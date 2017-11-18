@@ -15,7 +15,6 @@ services:
       SERVICE_NAME: transactions
   users:
     build: users
-    context: users
     environment:
       SERVICE_NAME: users
 
