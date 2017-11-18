@@ -1,33 +1,34 @@
-version: '3'
+version: "3"
+services:
 
-authentication:
-  build: authentication
-  dockerfile: Dockerfile
+  authentication:
+    build: authentication
+    dockerfile: Dockerfile
 
-  environment:
-    SERVICE_NAME: authentication
-notifications:
-  build: notifications
-  environment:
-    SERVICE_NAME: notifications
-transactions:
-  build: transactions
-  environment:
-    SERVICE_NAME: transactions
-users:
-  build: users
-  context: users
-  dockerfile: Dockerfile
+    environment:
+      SERVICE_NAME: authentication
+  notifications:
+    build: notifications
+    environment:
+      SERVICE_NAME: notifications
+  transactions:
+    build: transactions
+    environment:
+      SERVICE_NAME: transactions
+  users:
+    build: users
+    context: users
+    dockerfile: Dockerfile
 
-  environment:
-    SERVICE_NAME: users
+    environment:
+      SERVICE_NAME: users
 
-gateway:
-  build: api-gateway
-  links:
-    - authentication
-    - notifications
-    - transactions
-    - users
-  ports:
-    - 80
+  gateway:
+    build: api-gateway
+    links:
+      - authentication
+      - notifications
+      - transactions
+      - users
+    ports:
+      - 80
