@@ -1,28 +1,28 @@
 services:
 
   authentication:
-    build: authentication
+    build: 
     context: ./authentication
     environment:
       SERVICE_NAME: authentication
   notifications:
-    build: notifications
+    build: 
     context: ./notifications
     environment:
       SERVICE_NAME: notifications
   transactions:
-    build: transactions
+    build: 
     context: ./transactions
     environment:
       SERVICE_NAME: transactions
   users:
-    build: users
+    build: 
     context: ./users    
     environment:
       SERVICE_NAME: users
 
   gateway:
-    build: api-gateway
+    build: 
     context: ./api-gateway    
     links:
       - authentication
