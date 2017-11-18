@@ -1,4 +1,4 @@
-services:
+version: '2.1'
 
   authentication:
     build: 
