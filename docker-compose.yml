@@ -35,4 +35,4 @@ services:
       - transactions
       - users
     ports:
-      - 80
+      - 8081
