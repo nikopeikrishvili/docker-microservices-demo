@@ -1,6 +1,8 @@
 
 authentication:
   build: authentication
+  dockerfile: Dockerfile
+
   environment:
     SERVICE_NAME: authentication
 notifications:
@@ -13,6 +15,9 @@ transactions:
     SERVICE_NAME: transactions
 users:
   build: users
+  context: users
+  dockerfile: Dockerfile
+
   environment:
     SERVICE_NAME: users
 
