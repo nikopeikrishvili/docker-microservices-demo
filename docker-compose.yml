@@ -21,7 +21,7 @@ services:
   users:
     build: 
       context: ./users    
-      dockerfile: Dockerfile
+      dockerfile: DockerFile
     environment:
       SERVICE_NAME: users
 
