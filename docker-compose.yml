@@ -3,32 +3,32 @@ services:
   authentication:
     build: 
       context: ./authentication
-      dockerfile: Dockerfile-alternate
+      dockerfile: DockerFile
     environment:
       SERVICE_NAME: authentication
   notifications:
     build: 
       context: ./notifications
-      dockerfile: Dockerfile-alternate
+      dockerfile: DockerFile
     environment:
       SERVICE_NAME: notifications
   transactions:
     build: 
       context: ./transactions
-      dockerfile: Dockerfile-alternate
+      dockerfile: DockerFile
     environment:
       SERVICE_NAME: transactions
   users:
     build: 
       context: ./users    
-      dockerfile: Dockerfile-alternate
+      dockerfile: Dockerfile
     environment:
       SERVICE_NAME: users
 
   gateway:
     build: 
       context: ./api-gateway  
-      dockerfile: Dockerfile-alternate    
+      dockerfile: DockerFile    
     links:
       - authentication
       - notifications
