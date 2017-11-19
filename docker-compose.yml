@@ -7,6 +7,8 @@ services:
     environment:
       SERVICE_NAME: authentication
     container_name: services.authentication  
+    ports:
+    - 80
   notifications:
     build: 
       context: ./notifications
@@ -14,6 +16,8 @@ services:
     environment:
       SERVICE_NAME: notifications
     container_name: services.notifications  
+    ports:
+    - 80
   transactions:
     build: 
       context: ./transactions
@@ -21,6 +25,8 @@ services:
     environment:
       SERVICE_NAME: transactions
     container_name: services.transactions  
+    ports:
+    - 80
   user:
     build: 
       context: ./user   
