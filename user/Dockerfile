@@ -4,6 +4,6 @@ COPY /code /usr/share/nginx/html/user
 RUN apt-get update && apt-get install -y curl
 RUN  apt-get install -y php-fpm php-mysql
 RUN curl -sS https://getcomposer.org/installer |  php -- --install-dir=/usr/local/bin --filename=composer
-RUN systemctl restart php-fpm
-RUN systemctl restart nginx
+RUN service php-fpm restart 
+RUN service nginx restart 
 EXPOSE 80
