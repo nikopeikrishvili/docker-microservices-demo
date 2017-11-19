@@ -1,4 +1,3 @@
 FROM nginx
-COPY /code /usr/share/nginx/html/user
-COPY ./conf /etc/nginx/
-EXPOSE 80
+COPY /code /usr/share/nginx/html
+EXPOSE 9000
