@@ -18,12 +18,13 @@ services:
       dockerfile: DockerFile
     environment:
       SERVICE_NAME: transactions
-  users:
+  user:
     build: 
-      context: ./users    
+      context: ./users   
       dockerfile: DockerFile
     environment:
-      SERVICE_NAME: users
+      SERVICE_NAME: user
+    name: user_service  
     ports:
     - 80
 
