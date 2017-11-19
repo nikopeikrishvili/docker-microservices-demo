@@ -6,6 +6,7 @@ RUN  apt-get install -y php-fpm php-mysql
 RUN curl -sS https://getcomposer.org/installer |  php -- --install-dir=/usr/local/bin --filename=composer
 RUN rm /etc/php/7.0/fpm/pool.d/*
 COPY conf/php-fpm/www.conf /etc/php/7.0/fpm/pool.d/www.conf
-RUN service php7.0-fpm start 
 RUN service nginx restart
+RUN service php7.0-fpm restart 
+
 EXPOSE 80
