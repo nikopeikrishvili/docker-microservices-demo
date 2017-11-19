@@ -6,27 +6,30 @@ services:
       dockerfile: DockerFile
     environment:
       SERVICE_NAME: authentication
+    container_name: services.authentication  
   notifications:
     build: 
       context: ./notifications
       dockerfile: DockerFile
     environment:
       SERVICE_NAME: notifications
+    container_name: services.notifications  
   transactions:
     build: 
       context: ./transactions
       dockerfile: DockerFile
     environment:
       SERVICE_NAME: transactions
+    container_name: services.transactions  
   user:
     build: 
       context: ./user   
       dockerfile: Dockerfile
     environment:
       SERVICE_NAME: user
-    container_name: user_service  
+    container_name: services.user  
     ports:
-    - 80
+    - "80:80"
 
   gateway:
     build: 
