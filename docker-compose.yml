@@ -20,7 +20,7 @@ services:
       SERVICE_NAME: transactions
   user:
     build: 
-      context: ./users   
+      context: ./user   
       dockerfile: DockerFile
     environment:
       SERVICE_NAME: user
