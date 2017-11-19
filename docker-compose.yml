@@ -40,6 +40,8 @@ services:
       - notifications
       - transactions
       - user
+    depends:
+      - user  
     ports:
       - "80:80"
     
