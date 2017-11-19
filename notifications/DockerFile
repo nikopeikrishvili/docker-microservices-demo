@@ -3,3 +3,4 @@ RUN rm /etc/nginx/conf.d/default.conf; exit 0
 RUN rm /etc/nginx/conf.d/example_ssl.conf; exit 0
 COPY code /usr/share/nginx/html/notifications
 COPY conf /etc/nginx
+EXPOSE 80
