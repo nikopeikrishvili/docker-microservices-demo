@@ -1,3 +1,3 @@
 FROM nginx
 COPY /code /usr/share/nginx/html
-EXPOSE 9000
+EXPOSE 80

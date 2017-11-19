@@ -29,7 +29,7 @@ services:
       SERVICE_NAME: user
     container_name: services.user  
     ports:
-    - 9000
+    - 80
 
   gateway:
     build: 
