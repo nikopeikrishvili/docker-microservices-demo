@@ -24,6 +24,8 @@ services:
       dockerfile: DockerFile
     environment:
       SERVICE_NAME: users
+    ports:
+    - 80
 
   gateway:
     build: 
